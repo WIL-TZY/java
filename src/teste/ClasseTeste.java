@@ -6,6 +6,11 @@ import java.util.stream.Collectors;
 
 // Apostila Java: https://www.caelum.com.br/apostila/apostila-java-orientacao-objetos.pdf
 
+// JVM - A virtual machine (VM) de Java. Esse download não existe, ela sempre vem acompanhada de uma JRE.
+// JRE - 
+
+// Classe é uma unidade de modularização que define a estrutura dos objetos em Java
+// Todo arquivo Java deve ter exatamente o mesmo nome da classe pública
 public class ClasseTeste {
 
 	public record Pessoa(String nome, int idade) {} // (Java17) record

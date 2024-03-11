@@ -9,6 +9,8 @@ import java.util.stream.Collectors;
 // JVM - A virtual machine (VM) de Java. Esse download não existe, ela sempre vem acompanhada de uma JRE.
 // JRE - 
 
+//Ctrl + Shift + F -> Identação automática
+
 // Classe é uma unidade de modularização que define a estrutura dos objetos em Java
 // Todo arquivo Java deve ter exatamente o mesmo nome da classe pública
 public class Teste {

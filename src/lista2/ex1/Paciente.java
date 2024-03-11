@@ -1,5 +1,7 @@
 package lista2.ex1;
+
 import java.util.List;
+
 /*
 . Você foi contratad@ para implementar um sistema de clínica médica, crie uma classe “Paciente” com os
 atributos e o construtor descritos e depois realize os passos definidos a seguir:
@@ -23,8 +25,9 @@ public class Paciente {
 	char genero;
 	List<String> alergia;
 	String tipoSanguineo;
-	
-	public Paciente(int codigo, String nome, String dataNascimento, char genero, List<String> alergia, String tipoSanguineo) {
+
+	public Paciente(int codigo, String nome, String dataNascimento, char genero, List<String> alergia,
+			String tipoSanguineo) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
@@ -32,16 +35,10 @@ public class Paciente {
 		this.alergia = alergia;
 		this.tipoSanguineo = tipoSanguineo;
 	}
-	
+
 	public String toString() {
-		return (
-			"Paciente #" + this.codigo + 
-			"\nNome: " + this.nome + 
-			"\nData de nascimento: " + this.dataNascimento +
-			"\nGênero: " + this.genero + 
-			"\nAlergia: " + this.alergia +
-			"\nTipo Sanguíneo: " + this.tipoSanguineo + 
-			"\n"
-		);
+		return ("Paciente #" + this.codigo + "\nNome: " + this.nome + "\nData de nascimento: " + this.dataNascimento
+				+ "\nGênero: " + this.genero + "\nAlergia: " + this.alergia + "\nTipo Sanguíneo: " + this.tipoSanguineo
+				+ "\n");
 	}
 }

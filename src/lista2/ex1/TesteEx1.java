@@ -2,7 +2,7 @@ package lista2.ex1;
 
 import java.util.Arrays;
 
-public class testePaciente {
+public class TesteEx1 {
 	public static void main(String[] args) {
 		Paciente pai = new Paciente(
 			001, 

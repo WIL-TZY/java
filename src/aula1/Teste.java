@@ -1,4 +1,4 @@
-package teste;
+package aula1;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 // Classe é uma unidade de modularização que define a estrutura dos objetos em Java
 // Todo arquivo Java deve ter exatamente o mesmo nome da classe pública
-public class ClasseTeste {
+public class Teste {
 
 	public record Pessoa(String nome, int idade) {} // (Java17) record
 	

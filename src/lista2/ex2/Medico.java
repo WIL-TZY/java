@@ -14,5 +14,24 @@ CONSTRUTOR DA CLASSE MÉDICO:
 endereco. 
 */
 public class Medico {
-
+	// Atributos
+	String codigo;
+	String nome;
+	String sexo;
+	String especialidade;
+	private Endereco endereco;
+	
+	// Construtor
+	public Medico(String codigo, String nome, String sexo, String especialidade, Endereco endereco) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.sexo = sexo;
+		this.especialidade = especialidade;
+		this.endereco = endereco;
+	}
+	
+	// Métodos
+	public String toString() {
+		return "\nCodigo: " + codigo + "\nNome: " + nome + "\nSexo: " + sexo + "\nEspecialidade: " + especialidade + "\nEndereço: " + endereco.toString();
+	}
 }

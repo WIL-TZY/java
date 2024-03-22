@@ -32,6 +32,12 @@ public abstract class Funcionario {
 		this.salario = salario;
 	}
 	
-	public abstract double calcularBonificacao();
+	public double calcularBonificacao() {
+		 double bonificacao = salario * 0.1;
+		 return bonificacao;
+	}
+	
+	// Implementação de classe abstrata
+	// public abstract double calcularBonificacao();
 	
 }

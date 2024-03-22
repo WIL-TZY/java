@@ -2,6 +2,10 @@ package aula1;
 
 import java.util.Scanner;
 
+/* ATALHOS
+Alt + Shift + R: Multiple Replaces
+*/
+
 public class EntradaPadrao {
 	public static void main(String[] args) {
 		System.out.println("Digite um número qualquer: ");

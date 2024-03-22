@@ -1,5 +1,10 @@
 package aula2;
 
+/* Como diminuir a confusão de quem é quem em objetos e classes?
+	A palavra-chave "this" serve para diferenciar o que é do objeto do que é da classe
+	Já o "static" torna esse elemento próprio da classe
+*/
+
 public class ContaBancaria {
 	// Atributos de objeto
 	String numero;

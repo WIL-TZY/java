@@ -2,7 +2,9 @@ package lista4;
 
 public class ContaPoupanca extends Conta {
 	private static final double PORCENTAGEM = 0.005;
-	public ContaPoupanca(String numeroConta, int saldo) {
+	
+	// Construtor
+	public ContaPoupanca(String numeroConta, double saldo) {
 		super(numeroConta, saldo);
 		// TODO Auto-generated constructor stub
 	}

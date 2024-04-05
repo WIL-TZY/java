@@ -11,8 +11,8 @@ import java.util.Set;
 // Demonstrando os diferentes tipos de coleções em Java.
 /*
 	OBS:
-	Lists, Sets e Maps não precisam definir tamanho quando são instanciados.
-	Podemos acrescentar quantos elementos quisermos, que o Set cresce conforme for necessário.
+	Coleções (Lists, Sets, Maps, etc) não precisam definir tamanho quando são instanciados.
+	Podemos acrescentar quantos elementos quisermos, que a coleção cresce conforme for necessário.
 */
 
 /* Para saber mais 

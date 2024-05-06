@@ -3,30 +3,29 @@ package desafio;
 public class Empresa {
 
 	// Atributos
-	private String razao_social; 
+	private String razaoSocial; 
     private int cnpj;
     private Setor setor;
-    private TipoSocietario tipo_societario;
-    private String regime_tributario;
+    private TipoSocietario tipoSocietario;
+    // private String regimeTributario;
     
     // Construtor
-	public Empresa(String razao_social, int cnpj, Setor setor, TipoSocietario tipo_societario,
-			String regime_tributario) {
+	public Empresa(String razaoSocial, int cnpj, Setor setor, TipoSocietario tipoSocietario) {
 		super();
-		this.razao_social = razao_social;
+		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
 		this.setor = setor;
-		this.tipo_societario = tipo_societario;
-		this.regime_tributario = regime_tributario;
+		this.tipoSocietario = tipoSocietario;
+		// this.regimeTributario = regimeTributario;
 	}
 
 	// Gets & Sets
-	public String getRazao_social() {
-		return razao_social;
+	public String getRazaoSocial() {
+		return razaoSocial;
 	}
 
-	public void setRazao_social(String razao_social) {
-		this.razao_social = razao_social;
+	public void setRazaoSocial(String razaoSocial) {
+		this.razaoSocial = razaoSocial;
 	}
 
 	public int getCnpj() {
@@ -45,19 +44,11 @@ public class Empresa {
 		this.setor = setor;
 	}
 
-	public TipoSocietario getTipo_societario() {
-		return tipo_societario;
+	public TipoSocietario getTipoSocietario() {
+		return tipoSocietario;
 	}
 
-	public void setTipo_societario(TipoSocietario tipo_societario) {
-		this.tipo_societario = tipo_societario;
+	public void setTipoSocietario(TipoSocietario tipoSocietario) {
+		this.tipoSocietario = tipoSocietario;
 	}
-
-	public String getRegime_tributario() {
-		return regime_tributario;
-	}
-
-	public void setRegime_tributario(String regime_tributario) {
-		this.regime_tributario = regime_tributario;
-	}		
 }

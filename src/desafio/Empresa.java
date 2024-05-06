@@ -1,7 +1,12 @@
 package desafio;
 
-public class Empresa {
+import java.io.Serializable;
 
+public class Empresa implements Serializable {
+
+	// UID
+	private static final long serialVersionUID = 5669810348586770317L;
+	
 	// Atributos
 	private String razaoSocial; 
     private int cnpj;

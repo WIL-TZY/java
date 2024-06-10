@@ -13,12 +13,12 @@ public class Application {
 
     public static void main(String[] args) throws LifecycleException {
     	Tomcat tomcat = new Tomcat();
-    	tomcat.setPort(8888);
+    	tomcat.setPort(8889);
     	tomcat.getConnector(); // precisa pra funcionar
         
     	Context ctx = tomcat.addContext("", new File(".").getAbsolutePath());
     	// Argumentos são: context, string, service
-    	Tomcat.addServlet(ctx, "Hello Servlet", new HelloServlet());
+    	Tomcat.addServlet(ctx, "HelloServlet", new HelloServlet());
     	ctx.addServletMappingDecoded("/hello", "HelloServlet");
     	
     	Tomcat.addServlet(ctx, "InfoServlet", new InfoServlet());

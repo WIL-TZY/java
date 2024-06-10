@@ -4,6 +4,10 @@ import controller.HelloServlet;
 import controller.InfoServlet;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
@@ -21,7 +25,8 @@ Roda o programa:
 	java -jar target/javaweb-0.0.1-jar-with-dependencies.jar
 */
 public class Application {
-
+	private static final String URL = "jdbc:sqlite:banco.db";
+	
     public static void main(String[] args) throws LifecycleException {
     	Tomcat tomcat = new Tomcat();
     	tomcat.setPort(8888);
@@ -49,5 +54,21 @@ public class Application {
     	
     	tomcat.start();
     	tomcat.getServer().await();
+    }
+    
+    private static void initializeDatabase() {
+    	try (
+    		Connection conn = getConnection();
+    		Statement stmt = conn.createStatement()
+    	) {
+    	var sql = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL)";
+    		stmt.execute(sql);
+    	} catch (SQLException e) {
+    		e.printStackTrace();
+    	}
+    }
+    
+    public static Connection getConnection() throws SQLException {
+    	return DriverManager.getConnection(URL);
     }
 }

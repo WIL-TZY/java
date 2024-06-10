@@ -4,12 +4,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import br.com.nael.javaweb.Application;
 
 /*
 A anotação @WebServlet é usada em classes 
@@ -42,5 +47,25 @@ public class HelloServlet extends HttpServlet {
 		response.getWriter().flush();
 		response.getWriter().close();
 		*/
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+		throws IOException {
+		String name = request.getParameter("name");
+		
+		if (name != null && !name.isEmpty()) {
+			try (Connection conn = Application.getConnection()) {
+				String sql = "INSERT INTO users (name) VALUES (?)";
+				try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+					pstmt.setString(1, name);
+					pstmt.executeUpdate();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		response.sendRedirect("hello");
 	}
 }

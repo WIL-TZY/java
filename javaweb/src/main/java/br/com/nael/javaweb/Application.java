@@ -1,5 +1,8 @@
 package br.com.nael.javaweb;
 
+import controller.HelloServlet;
+import controller.InfoServlet;
+
 import java.io.File;
 
 import org.apache.catalina.Context;

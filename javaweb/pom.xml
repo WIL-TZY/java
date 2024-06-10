@@ -68,7 +68,7 @@
 					<archive>
 						<manifest>
 							<!-- Onde está o main -->
-							<mainClass>br.com.nael.Application</mainClass>
+							<mainClass>br.com.nael.javaweb.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
